@@ -55,6 +55,8 @@ jobs:
 
       - name: Commit and push changes
         run: |
+          git config --global user.email "gchristian@indecisive.ca"
+          git config --global user.name "advisorgee"
           git add ./*/Dockerfile
           if [ "$(git diff HEAD)" ]
           then
